@@ -1,0 +1,53 @@
+package JOSHPACK;
+import java.util.Scanner;
+public class fLabwork6 {
+
+	public static void main(String[] args) {
+		
+		
+			float inputnumber, numinputsum;
+		numinputsum = 0;
+		
+	
+	
+		for ( inputnumber = 1; inputnumber %10!= 0; inputnumber++)
+		{
+			Scanner test = new Scanner(System.in);
+			System.out.print("Enter a value: ");
+			inputnumber = test.nextInt();
+			numinputsum += inputnumber;
+			if (inputnumber % 10 == 0) {
+				System.out.println("Your value is divisible by 10.");
+				System.out.println("       ");
+				break;
+				
+							}
+			
+		}
+		Scanner test = new Scanner(System.in);
+		String yesorno;	
+		System.out.println("The total of all the value is: "+numinputsum);
+		System.out.println("\n");
+		System.out.println("Try Again? ");
+		yesorno = test.nextLine();
+		yesorno = yesorno.toUpperCase();
+		
+		if(yesorno.equals("YES"))
+		{
+			System.out.print("    ");
+			main(null);
+		}
+		
+		else
+		{
+			System.out.println("   *");
+			System.out.println("  ***");
+			System.out.println(" ***** ");
+		}
+		
+	
+		
+		
+	}
+
+}
