@@ -1,0 +1,114 @@
+package JOSHPACK;
+import java.util.Scanner;
+
+
+public class fLabwork4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner input = new Scanner(System.in);
+int inputNum = 7;
+float total;
+total = 0;
+int grade[] = new int[inputNum];
+int newin = 0;
+int sub;
+
+
+float ClassParticipation;
+
+for (sub = 0; sub < inputNum; sub++) {
+	System.out.println("Input Midterm Grades: ");
+	grade[sub] = input.nextInt();
+	
+	total = total + grade[sub];
+}
+ClassParticipation = total / inputNum;
+System.out.println("Class Participation:"+ClassParticipation+"");
+System.out.println(" ");
+
+System.out.println("Midterm Exam: ");
+int midtermexam;
+midtermexam = input.nextInt();
+int midtermgrade = 0;
+double midtermfinal=((ClassParticipation*.60)+(midtermexam*.40));
+System.out.println("Midterm Final Grade: "+midtermfinal+"");
+
+
+
+
+
+int inputNumFinal = 7;
+float totalFinal;
+totalFinal = 0;
+int gradeFinal[] = new int[inputNumFinal];
+int newinFinal = 0;
+int subFinal;
+
+
+float ClassParticipationFinal;
+
+for (sub = 0; sub < inputNum; sub++) {
+	System.out.println("Input Final Grades: ");
+	grade[sub] = input.nextInt();
+	
+	total = total + grade[sub];
+}
+ClassParticipationFinal = totalFinal / inputNumFinal;
+System.out.println("Class Participation:"+ClassParticipation+"");
+System.out.println(" ");
+
+System.out.println("Final Exam: ");
+int Finalexam;
+Finalexam = input.nextInt();
+int Finalgrade = 0;
+double Finalfinal=((ClassParticipation*.60)+(Finalexam*.40));
+System.out.println("Finals Grade: "+Finalfinal+"");
+
+int overall;
+overall = input.nextInt();
+double overallfinal=((Finalfinal + midtermfinal)
+
+
+
+System.out.print("Overall Grade Equivalent: "+midtermequivalent());
+	}
+
+public static double midtermequivalent(double midtermgrade)
+{ double equivalent = 0;
+	
+	
+	if (midtermgrade >=95 && midtermgrade <=100)
+	{
+		equivalent = (double)4.0;
+	}
+	else if (midtermgrade >=91 && midtermgrade <=94.9) {
+		equivalent = (double)3.5;
+	}
+	else if (midtermgrade >=87 && midtermgrade <=90.9)
+	{
+		equivalent = (double)3.0;
+	}
+	else if (midtermgrade >=83 && midtermgrade <=86.9)
+	{
+		equivalent = (double)2.5;
+	}
+	else if (midtermgrade >=79 && midtermgrade <=82.9)
+	{
+		equivalent = (double)2.0;
+	}
+	else if (midtermgrade >=75 && midtermgrade <=78.9)
+	{
+		equivalent = (double)1.5;
+	}
+	else if (midtermgrade >=70. && midtermgrade <=74.9)
+	{
+		equivalent = (double)1.0;
+	}
+	else if (midtermgrade < 70)
+	{
+		equivalent = (double)0.0;
+	}
+	return equivalent;
+}
+}
